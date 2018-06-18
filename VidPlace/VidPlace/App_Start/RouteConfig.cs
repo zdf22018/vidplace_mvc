@@ -13,6 +13,15 @@ namespace VidPlace
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    name: "homeIndex2",
+            //    url: "Home/Index/{pageindex}/{sortby}",
+            //    defaults: new { controller = "Home", action = "Input", id = UrlParameter.Optional },
+            //    constraints: new {pageindex="10", sortby="^[ABC]{1,3}$"} //old way
+            //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
